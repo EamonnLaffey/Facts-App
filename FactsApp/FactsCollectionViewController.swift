@@ -72,9 +72,7 @@ class FactsCollectionViewController: UICollectionViewController {
             cell.factTitle.text = row.title
             if let imageHref = row.imageHref {
                 downloadImageFrom(url: imageHref, at: indexPath)
-                if images[index] != nil {
-                    cell.factImage.image = images[index]?.image
-                }
+                cell.factImage.image = images[index]?.image
             } else {
                 cell.factImage.image = nil
             }
@@ -136,7 +134,7 @@ class FactsCollectionViewController: UICollectionViewController {
             let detailViewController = segue.destination as! FactDetailViewController
             if let index = self.collectionView?.indexPathsForSelectedItems?.first?.item {
                 detailViewController.factDescription = facts?.rows[index].description
-                detailViewController.title = facts?.rows[index].title
+                detailViewController.factTitle = facts?.rows[index].title
                 detailViewController.image = images[index]?.image
             }
         }
