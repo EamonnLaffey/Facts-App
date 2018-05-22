@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,19 +19,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uaV-Nd-wDV">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jtb-xj-5lR">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="factCollectionViewCell" id="Jtb-xj-5lR" customClass="FactCollectionViewCell" customModule="FactsApp" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-fk-fTd">
+                                            <rect key="frame" x="8" y="8" width="184" height="184"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIr-ZU-Sjb">
+                                            <rect key="frame" x="8" y="171" width="184" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="MIr-ZU-Sjb" secondAttribute="bottom" id="7VW-KA-U1S"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MIr-ZU-Sjb" secondAttribute="trailing" id="PnU-h4-NPC"/>
+                                    <constraint firstItem="YJG-fk-fTd" firstAttribute="top" secondItem="Jtb-xj-5lR" secondAttribute="topMargin" id="Tw0-4M-sDI"/>
+                                    <constraint firstItem="YJG-fk-fTd" firstAttribute="leading" secondItem="Jtb-xj-5lR" secondAttribute="leadingMargin" id="ciJ-XU-R2V"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="YJG-fk-fTd" secondAttribute="trailing" id="lbk-M6-tsm"/>
+                                    <constraint firstItem="MIr-ZU-Sjb" firstAttribute="leading" secondItem="Jtb-xj-5lR" secondAttribute="leadingMargin" id="m7V-kA-Dxr"/>
+                                    <constraint firstItem="MIr-ZU-Sjb" firstAttribute="bottom" secondItem="YJG-fk-fTd" secondAttribute="bottom" id="s7G-eV-6YA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="factImage" destination="YJG-fk-fTd" id="noR-Sn-kqA"/>
+                                    <outlet property="factTitle" destination="MIr-ZU-Sjb" id="qZJ-gd-saV"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
