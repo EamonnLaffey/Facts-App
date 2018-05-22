@@ -86,10 +86,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="car-hI-li0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="566"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-4E-523">
-                                <rect key="frame" x="0.0" y="646.5" width="375" height="20.5"/>
+                                <rect key="frame" x="8" y="638.5" width="359" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,10 +98,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="car-hI-li0" firstAttribute="top" secondItem="YSR-Gv-mdT" secondAttribute="bottom" id="AO7-wc-t9H"/>
-                            <constraint firstItem="TVB-aQ-tSm" firstAttribute="top" secondItem="1WC-4E-523" secondAttribute="bottom" id="U59-Gj-Mt3"/>
+                            <constraint firstItem="TVB-aQ-tSm" firstAttribute="top" secondItem="1WC-4E-523" secondAttribute="bottom" constant="8" id="U59-Gj-Mt3"/>
                             <constraint firstAttribute="trailing" secondItem="car-hI-li0" secondAttribute="trailing" id="Y0R-ks-vIe"/>
-                            <constraint firstItem="1WC-4E-523" firstAttribute="leading" secondItem="Ck3-4G-97e" secondAttribute="leading" id="Z05-ld-SxW"/>
-                            <constraint firstAttribute="trailing" secondItem="1WC-4E-523" secondAttribute="trailing" id="lcz-mJ-dD1"/>
+                            <constraint firstItem="1WC-4E-523" firstAttribute="leading" secondItem="Ck3-4G-97e" secondAttribute="leading" constant="8" id="Z05-ld-SxW"/>
+                            <constraint firstAttribute="trailing" secondItem="1WC-4E-523" secondAttribute="trailing" constant="8" id="lcz-mJ-dD1"/>
                             <constraint firstItem="1WC-4E-523" firstAttribute="firstBaseline" secondItem="car-hI-li0" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="tpb-Bs-PyK"/>
                             <constraint firstItem="car-hI-li0" firstAttribute="leading" secondItem="Ck3-4G-97e" secondAttribute="leading" id="u3c-Ws-yD4"/>
                         </constraints>

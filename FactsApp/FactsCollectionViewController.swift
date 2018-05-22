@@ -109,7 +109,7 @@ class FactsCollectionViewController: UICollectionViewController {
             print("Data ", dataString)
             do {
                 self.facts = try JSONDecoder().decode(Facts.self, from: dataConverted)
-                print(self.facts!.title)
+                self.title = self.facts?.title
                 DispatchQueue.main.async {
                     self.collectionView?.reloadData()
                 }
@@ -135,9 +135,8 @@ class FactsCollectionViewController: UICollectionViewController {
         if segue.identifier == "gotoDetailView" {
             let detailViewController = segue.destination as! FactDetailViewController
             if let index = self.collectionView?.indexPathsForSelectedItems?.first?.item {
-                if facts?.rows[index].description != nil {
-                    detailViewController.factDescription = facts?.rows[index].description
-                }
+                detailViewController.factDescription = facts?.rows[index].description
+                detailViewController.title = facts?.rows[index].title
                 detailViewController.image = images[index]?.image
             }
         }
