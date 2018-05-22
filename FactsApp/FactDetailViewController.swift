@@ -25,14 +25,16 @@ class FactDetailViewController: UIViewController {
     }()
 
     lazy var landscapeContraints = [
+        self.factImageView.widthAnchor.constraint(equalToConstant: view.frame.width / 3),
+
         self.factImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
         self.factImageView.topAnchor.constraint(equalTo: view.topAnchor),
-        self.view.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor),
-        self.view.bottomAnchor.constraint(equalTo: descriptionLabel.bottomAnchor),
+        self.factImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
-        self.descriptionLabel.topAnchor.constraint(equalTo: view.bottomAnchor),
+        self.descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        self.descriptionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        self.descriptionLabel.topAnchor.constraint(equalTo: view.topAnchor),
         self.descriptionLabel.leadingAnchor.constraint(equalTo: factImageView.trailingAnchor),
-        self.descriptionLabel.topAnchor.constraint(equalTo: view.bottomAnchor),
     ]
     lazy var portraitConstraints = [
         self.factImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
