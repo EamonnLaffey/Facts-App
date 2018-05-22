@@ -27,6 +27,15 @@ struct Image {
 class FactsCollectionViewController: UICollectionViewController {
     var facts: Facts?
     var images = [Int: Image]()
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+
+    @objc func handleRefresh(_: UIRefreshControl) {
+        fetchData()
+    }
 
     override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         if let facts = self.facts {
@@ -75,7 +84,12 @@ class FactsCollectionViewController: UICollectionViewController {
 
     func fetchData() {
         let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json")!
+        refreshControl.beginRefreshing()
         URLSession.shared.dataTask(with: url) { data, _, error in
+            DispatchQueue.main.async {
+                self.collectionView?.reloadData()
+                self.refreshControl.endRefreshing()
+            }
             if error != nil {
                 print(error!.localizedDescription)
                 return
@@ -107,7 +121,7 @@ class FactsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionView?.addSubview(refreshControl)
         fetchData()
     }
 
