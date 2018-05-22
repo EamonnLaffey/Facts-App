@@ -109,9 +109,9 @@ class FactsCollectionViewController: UICollectionViewController {
             print("Data ", dataString)
             do {
                 self.facts = try JSONDecoder().decode(Facts.self, from: dataConverted)
-                self.title = self.facts?.title
                 DispatchQueue.main.async {
                     self.collectionView?.reloadData()
+                    self.title = self.facts?.title
                 }
             } catch let jsonError {
                 print("Json Error", jsonError)
