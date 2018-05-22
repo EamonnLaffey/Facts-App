@@ -135,8 +135,10 @@ class FactsCollectionViewController: UICollectionViewController {
         if segue.identifier == "gotoDetailView" {
             let detailViewController = segue.destination as! FactDetailViewController
             if let index = self.collectionView?.indexPathsForSelectedItems?.first?.item {
-                detailViewController.factDescription.text = facts?.rows[index].description
-                detailViewController.factImage.image = images[index]?.image
+                if facts?.rows[index].description != nil {
+                    detailViewController.factDescription = facts?.rows[index].description
+                }
+                detailViewController.image = images[index]?.image
             }
         }
     }
