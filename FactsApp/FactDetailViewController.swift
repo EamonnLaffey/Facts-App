@@ -13,6 +13,7 @@ class FactDetailViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
 
     var image: UIImage?
+    var factTitle: String?
     var factDescription: String?
 
     override func viewDidLoad() {
@@ -26,5 +27,6 @@ class FactDetailViewController: UIViewController {
     override func viewWillAppear(_: Bool) {
         descriptionLabel.text = factDescription
         imageView.image = image
+        title = factTitle
     }
 }
