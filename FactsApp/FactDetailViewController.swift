@@ -9,8 +9,17 @@
 import UIKit
 
 class FactDetailViewController: UIViewController {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var descriptionLabel: UILabel!
+    let factImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
     var image: UIImage?
     var factTitle: String?
@@ -18,6 +27,9 @@ class FactDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.addSubview(factImageView)
+        view.addSubview(descriptionLabel)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +38,14 @@ class FactDetailViewController: UIViewController {
 
     override func viewWillAppear(_: Bool) {
         descriptionLabel.text = factDescription
-        imageView.image = image
+        factImageView.image = image
         title = factTitle
+    }
+
+    override func viewWillTransition(to _: CGSize, with _: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+//            imageView.image?.setSie = CGSize(width: self.view.frame.width / 3, height: self.view.frame.height)
+        } else {
+        }
     }
 }
