@@ -128,4 +128,16 @@ class FactsCollectionViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        if segue.identifier == "gotoDetailView" {
+            let detailViewController = segue.destination as! FactDetailViewController
+            if let index = self.collectionView?.indexPathsForSelectedItems?.first?.item {
+                detailViewController.factDescription.text = facts?.rows[index].description
+                detailViewController.factImage.image = images[index]?.image
+            }
+        }
+    }
 }

@@ -13,6 +13,7 @@
 		F9BF099820B3AD7E00358940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BF099720B3AD7E00358940 /* Assets.xcassets */; };
 		F9BF099B20B3AD7E00358940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BF099920B3AD7E00358940 /* LaunchScreen.storyboard */; };
 		F9BF09A320B3B21100358940 /* FactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BF09A220B3B21100358940 /* FactCollectionViewCell.swift */; };
+		F9BF09A520B3BBDF00358940 /* FactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BF09A420B3BBDF00358940 /* FactDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F9BF099A20B3AD7E00358940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9BF099C20B3AD7E00358940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BF09A220B3B21100358940 /* FactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9BF09A420B3BBDF00358940 /* FactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F9BF099020B3AD7800358940 /* AppDelegate.swift */,
 				F9BF099220B3AD7800358940 /* FactsCollectionViewController.swift */,
 				F9BF09A220B3B21100358940 /* FactCollectionViewCell.swift */,
+				F9BF09A420B3BBDF00358940 /* FactDetailViewController.swift */,
 				F9BF099420B3AD7800358940 /* Main.storyboard */,
 				F9BF099720B3AD7E00358940 /* Assets.xcassets */,
 				F9BF099920B3AD7E00358940 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9BF099320B3AD7800358940 /* FactsCollectionViewController.swift in Sources */,
+				F9BF09A520B3BBDF00358940 /* FactDetailViewController.swift in Sources */,
 				F9BF099120B3AD7800358940 /* AppDelegate.swift in Sources */,
 				F9BF09A320B3B21100358940 /* FactCollectionViewCell.swift in Sources */,
 			);
