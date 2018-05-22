@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Facts Collection View Controller-->
         <scene sceneID="ASF-9n-AUB">
             <objects>
-                <collectionViewController id="R8O-qK-IPh" sceneMemberID="viewController">
+                <collectionViewController id="R8O-qK-IPh" customClass="FactsCollectionViewController" customModule="FactsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oQ8-o2-Pwn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-fk-fTd">
-                                            <rect key="frame" x="8" y="8" width="184" height="184"/>
+                                            <rect key="frame" x="8" y="8" width="184" height="143"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIr-ZU-Sjb">
                                             <rect key="frame" x="8" y="171" width="184" height="21"/>
@@ -48,9 +48,9 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="MIr-ZU-Sjb" secondAttribute="trailing" id="PnU-h4-NPC"/>
                                     <constraint firstItem="YJG-fk-fTd" firstAttribute="top" secondItem="Jtb-xj-5lR" secondAttribute="topMargin" id="Tw0-4M-sDI"/>
                                     <constraint firstItem="YJG-fk-fTd" firstAttribute="leading" secondItem="Jtb-xj-5lR" secondAttribute="leadingMargin" id="ciJ-XU-R2V"/>
+                                    <constraint firstItem="MIr-ZU-Sjb" firstAttribute="top" secondItem="YJG-fk-fTd" secondAttribute="bottom" constant="20" id="fQW-ab-c0L"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="YJG-fk-fTd" secondAttribute="trailing" id="lbk-M6-tsm"/>
                                     <constraint firstItem="MIr-ZU-Sjb" firstAttribute="leading" secondItem="Jtb-xj-5lR" secondAttribute="leadingMargin" id="m7V-kA-Dxr"/>
-                                    <constraint firstItem="MIr-ZU-Sjb" firstAttribute="bottom" secondItem="YJG-fk-fTd" secondAttribute="bottom" id="s7G-eV-6YA"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="factImage" destination="YJG-fk-fTd" id="noR-Sn-kqA"/>
